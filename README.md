@@ -1,35 +1,65 @@
+## My Journey Developing a Script with GitHub Copilot
 
-# -@小红书“windwalker”——西体晚八抢场小能手——2419735045
+### Phase 1: Diligent Manual Booking—Early Mornings and Multi-Device Sync
 
-本仓库不传播脚本，仅仅写点使用github copilot开发脚本的心路历程
+At first, I relied on hard work, waking up early every day to try to book courts as soon as reservations opened. I would synchronize my attempts on both my phone and computer, hoping to improve my chances.
 
-第一阶段——兢兢业业的每天早起抢场，手机端和电脑端同步抢场
+### Phase 2: The Phone’s Advantage
 
-第二阶段——发现手机抢场总是比电脑端抢场快，原因在于电脑端抢场需要跳转日期和时间，速度十分缓慢
+Soon, I discovered that booking via my phone was consistently faster than on my computer. The culprit seemed to be the computer’s need to navigate through date and time selectors, slowing the process down significantly.
 
-第三阶段——夏天到临，西体羽毛球空调场地火爆，脚本盛行，渐渐抢不到场，萌生了开发脚本的念头（身边有人已经有脚本，但碍于面子一直不好意思开口）
+### Phase 3: The Rise of Scripts and New Motivation
 
-第四阶段——开始准备编写脚本，本人完全java零基础，也非计算机专业学生，本科仅仅有一点点python基础，可以信赖的只有国外新开发的最新AI
+As summer arrived, the demand for air-conditioned courts at the West Gym soared, and scripts became popular among players. Suddenly, it became almost impossible to secure a spot manually. I realized that some people around me were already using scripts, but out of pride, I hesitated to ask them for help. Still, the idea of developing my own script began to take root.
 
-第五阶段——申请github学生认证获取github coplilot的使用权，具体申请流程B站有相关教程。
+### Phase 4: Starting from Scratch (With a Little Python)
 
-第六阶段——开始使用AI写脚本，一开始也是无厘头，想着瞎猫碰死耗子，直接把网页截图和网址给AI，让AI写出一个脚本。AI成功写出一个可以在浏览器控制台F12运行的脚本1.0—
+With no background in Java and not being a computer science major, I only had a bit of basic Python knowledge from my undergraduate days. My only real ally was the latest AI technologies being developed abroad.
 
-第七阶段——脚本1.0采用最易懂的模拟鼠标点击的办法，通过识别我要预约按钮，定时点击，然而识别按钮速度太慢方案并不可取，同时进入页面后也没有解决关键的页面跳转问题。
+### Phase 5: Gaining Access to GitHub Copilot
 
-第八阶段——因此我决定预约按钮由我手动点击，采用脚本完成第二步操作——页面重定向，这也是关键的脚本2.0.这里只需要把预约界面的链接和目标页面界面的链接告诉AI，它就可以生成跳转链接。方法简单易行。
+I applied for GitHub’s student program to get access to GitHub Copilot. (There are detailed tutorials on Bilibili about the application process.)
 
-第九阶段——然而重定向确实可以运行，但我跳不开第一步预约按钮，脚本的运行需要在浏览器控制台中进行，然而当网页刷新时，控制台会清空，从而导致脚本无法运行。结合浏览器插件脚本猴temmonkey可以解决这个问题，到这里脚本就初见雏形。
+### Phase 6: My First AI-Powered Script
 
-第十阶段——脚本已经可以跑通，并且到这时有几率可以约到场了，然而也只是有概率问题，还需要进一步优化。所幸这时其他脚本也还没有泛滥，我也可以从西体晚场捞一点场地打打。
+When I started using AI to write scripts, I had no real plan—just hoping for a lucky break. I provided the AI with website screenshots and URLs, asking it to generate a script. Amazingly, it produced a working script (version 1.0) that could be run in the browser console (F12).
 
-第十一阶段——第一步优化，关闭预约须知弹窗，我发现每次这个预约须知弹窗是图片形式，刷新很慢，我想着用脚本解决，结果试了一个星期速度十分慢，后来我发现预约场地不需要点击确定阅读，直接关闭即可，遂停止优化这方面内容。
+### Phase 7: Script 1.0—The Click Simulator
 
-第十二阶段——第二步优化，优化同伴选择，这个十分简单，甚至几十行代码就完成了。
+Script 1.0 used a simple approach: simulating mouse clicks to repeatedly look for and press the “Book Now” button at scheduled times. But the button recognition was too slow, and navigating through pages after entering the website was still a major hurdle.
 
-第十三阶段——第三步优化，自动选择场地，这个十分困难，我尝试过自动识别空缺场地或者固定约同一片场地，但运行速度都十分慢，没有手动点击速度快，同时选择完场地后点击预约按钮，脚本点击也要慢一点，因此放弃。
+### Phase 8: Manual Button Clicks and Page Redirection—Script 2.0
 
-第十四阶段——换思路优化，我让AI分析预约按钮，发现是提交一个表单，然后对应写出一个脚本模拟提交表单，后来发现被系统拒绝了，原来系统在这最后一步增加了防止脚本提交脚本锁场的机制，因此停止开发这一功能，转而使用手动进行预约。
+To address this, I decided to handle the “Book Now” button manually and let the script automate the subsequent page redirection steps (Script 2.0). All I had to do was provide the AI with the reservation and target page links, and it would generate a redirection script—a simple and effective solution.
 
-第十五阶段——最终版完成，然而由于同学投诉，西体系统更新，防脚本监测增强，其他更强大的脚本盛行，我的重定向脚本也只能比手动快一点点，甚至使用手机速度快还要在我的脚本之前，因此现在也只能每天试试看看运气好不好，能不能抢到，但总的来说一个星期还是能有那么一两天抢得到西体晚场的。
+### Phase 9: Limitations of Redirection and the Power of Tampermonkey
 
+Redirection worked, but I still couldn’t bypass the initial “Book Now” button. Running scripts in the browser console was also problematic, since the console clears on page refresh, interrupting the script. I discovered that using a browser extension like Tampermonkey could solve this, and at this point, my script began to take real shape.
+
+### Phase 10: Early Success, But Not Guaranteed
+
+The script was functional and allowed me to occasionally secure a spot, though not always—there was still an element of luck. Fortunately, script use hadn’t become rampant yet, so I could still get a court from time to time.
+
+### Phase 11: First Optimization—Closing the Reservation Notice Popup
+
+My first optimization attempt was to handle the reservation notice popup, which was an image that loaded slowly. I tried scripting the popup’s closure, but it was too slow. Eventually, I realized it wasn’t necessary to click “Confirm”—just closing the popup was enough, so I dropped this optimization.
+
+### Phase 12: Second Optimization—Streamlining Partner Selection
+
+The next optimization was much simpler: automating the selection of playing partners. This took just a few dozen lines of code.
+
+### Phase 13: Third Optimization—Auto-Selecting Courts (And Its Limits)
+
+I tried to automate court selection by identifying available slots or always booking the same court. However, these solutions were slower than manual clicking. Even after selecting a court, the script’s click on the “Book” button lagged, so I abandoned this approach.
+
+### Phase 14: A New Approach—Form Submission, Then System Roadblocks
+
+Changing tactics, I asked AI to analyze the “Book” button, discovering it submitted a form. I wrote a script to simulate form submission, but the system blocked it—apparently, anti-script mechanisms had been added to prevent automated bookings. I had to stop pursuing this line of development.
+
+### Phase 15: The Final Version—A Race Against Ever-Improving Defenses
+
+With my final version complete, the university updated the booking system in response to student complaints, strengthening its anti-script monitoring. More advanced scripts emerged, making it even harder for mine to stand out. Sometimes, booking manually on a phone was actually faster than using my script. At this point, I could only rely on luck—occasionally securing a spot, but generally getting in once or twice a week at best.
+
+---
+
+Looking back, using AI and GitHub Copilot to develop my script was a journey full of learning, trial and error, and adapting to ever-changing challenges.
